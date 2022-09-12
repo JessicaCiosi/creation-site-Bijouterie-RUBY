@@ -1,0 +1,233 @@
+/* Tablette */
+
+@media screen and (max-width:768px){
+
+    /* Footer */
+
+    .footer-menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Header */
+
+    .main-header__container-list{
+        display: none;
+    }
+
+    .main-header__container {
+        border-bottom: 2px solid #ff69B4;
+    }
+
+    /* Accueil */
+
+    .accueil-precision {
+        font-size: 1em;
+    }
+
+    /* Menu burger */
+
+   .burger {
+       display: block;
+   }
+
+   .menu {
+       margin: 0;
+       display: none;
+       position: static;
+   }
+
+   .menu li {
+       display: block;
+       border-top: 0.06em solid #fff;
+   }
+
+   .menu li:first-of-type {
+       border-top: none;
+   }
+
+   .menu li:not(:first-of-type) a {
+    border-left: 0;
+   }
+
+   /* menu Bijoux et accessoires */
+
+   .menu-bijoux, .menu-accessoires {
+       padding: 0;
+   }
+
+   .menu-bijoux a, .menu-accessoires a {
+       padding: 1em 0;
+   }
+
+   .menu-bijoux li, .menu-accessoires li {
+        display: block;
+        width: 100%;
+        border-top: 0.2em solid #fff;
+   }
+
+   .menu-bijoux li:not(:first-of-type) a, .menu-accessoires li:not(:first-of-type) a {
+    border-left: 0;
+   }
+
+   .section-menu-bijoux h3 {
+    font-size: 1em;
+}
+
+.details-boutique-block-1 {
+    margin: 2em 4em 0 4em;
+}
+
+}
+
+/* Mobile */
+
+@media screen and (max-width:480px){
+
+    .accueil-precision {
+        font-size: 0.9em;
+    }
+
+    .categorie-accueil {
+        border: none;
+    }
+
+    .section-menu-bijoux h3 {
+        font-size: 0.9em;
+    }
+
+    #puces {
+        display: none;
+    }
+
+    .slider .caption1 h3, .slider .caption2 h3 {
+        display: block;
+        color: black;
+    }
+
+    .slider .caption1 h1, .slider .caption2 h1 {
+        display: none;
+    }
+    
+    .slider .caption1 p, .slider .caption2 p {
+        display: none;
+    }
+
+    .pagination {
+        display: none;
+    }
+
+    .left, .right {
+        font-size: 20px;
+    }
+
+    .details-boutique-block-1 {
+        margin: 2em 0.2em 0 0.2em;
+    }
+
+}
+
+/* Autres */
+
+@media screen and (max-width:1100px){
+    .slider .caption1 {
+        padding: 15px 120px;
+    }
+    
+    .slider .caption2 {
+        padding: 15px 120px;
+    }
+    
+    .slider .caption1 h1, .slider .caption2 h1 {
+        font-size: 35px;
+    }
+    
+    .slider .caption1 p, .slider .caption2 p {
+        font-size: 15px;
+    }
+
+    .details-boutique-block-1 {
+        margin: 2.5em 7em 0 7em;
+    }
+}
+
+@media screen and (max-width:850px){
+    .slider .caption1 {
+        padding: 15px 90px;
+    }
+    
+    .slider .caption2 {
+        padding: 15px 90px;
+    }
+    
+    .slider .caption1 h1, .slider .caption2 h1 {
+        font-size: 32px;
+    }
+    
+    .slider .caption1 p, .slider .caption2 p {
+        font-size: 15px;
+    }
+
+    .left, .right {
+        font-size: 30px;
+    }
+
+    .details-boutique-block-1 {
+        margin: 2.5em 5em 0 5em;
+        font-size: 15px;
+    }
+
+    .details-boutique-block-2 {
+        margin-top: 2em;
+        flex-wrap: wrap;
+    }
+
+    .gmap {
+        margin-bottom: 2em;
+    }
+
+    .details-boutique {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:690px){
+    .slider .caption1 {
+        padding: 15px 80px;
+    }
+    
+    .slider .caption2 {
+        padding: 15px 80px;
+    }
+    
+    .slider .caption1 h1, .slider .caption2 h1 {
+        font-size: 30px;
+    }
+    
+    .slider .caption1 p, .slider .caption2 p {
+        display: none;
+    }
+
+    .pagination {
+        display: none;
+    }
+
+    .left, .right {
+        font-size: 25px;
+    }
+
+    .details-boutique-block-1 {
+        margin: 2em 3em 0 3em;
+        font-size: 13px;
+    }
+
+    .gmap iframe {
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .gmap iframe {
+        height: 80vh;
+    }
+}

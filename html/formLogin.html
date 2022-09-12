@@ -1,0 +1,26 @@
+<style> 
+    input[type=text], input[type=password] {
+      width: 25%;
+      padding: 10px 20px;
+      margin: 5px 0;
+      border: 1px solid black; 
+    }
+    input[type=submit] {
+      width: 10%;
+      padding: 12px 20px;
+      border: 1px solid #555;
+      background-color: pink;
+      color:white;
+        
+    }
+</style>
+    
+<form action="login.php" method="POST">
+    <label for="uname">Identifiant</label>
+    <input type="text" id="uname" name="uname" required=""><br><br>
+    
+    <label for="upassword">Mot de passe</label>
+    <input type="password" id="upassword" name="upassword" required=""><br><br>
+    
+    <input type="submit" name="sub" value="Connexion">
+<form>

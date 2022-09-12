@@ -1,0 +1,54 @@
+<nav class="desk">
+    <!--Menu burger-->
+    <div class="burger">
+        <i class="fa fa-bars"></i>
+    </div>
+    <!--Menu principal-->
+    <ul class="menu">
+        <li>
+            <a href="index.php?page=accueil">ACCUEIL</a>
+        </li>
+        <li>
+            <a href="index.php?page=bijoux">BIJOUX</a>
+            <!--Sous menu-->
+            <ul class="sousMenu">
+                <li>
+                    <a href="index.php?page=bijoux#bagues">Bagues</a>
+                </li>
+                <li>
+                    <a href="index.php?page=bijoux#bracelets">Bracelets</a>
+                </li>
+                <li>
+                    <a href="index.php?page=bijoux#colliers">Colliers</a>
+                </li>
+                <li>
+                    <a href="index.php?page=bijoux#bo">Boucles d'oreilles</a>
+                </li>
+                <li>
+                    <a href="index.php?page=bijoux#piercings">Piercings</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="index.php?page=accessoires">ACCESSOIRES</a>
+        </li>
+        <li>
+            <a href="index.php?page=a-propos">À PROPOS</a>
+        </li>
+        <li>
+            <a href="index.php?page=contact">CONTACT</a>
+        </li>
+    </ul>
+</nav>
+<!--Script menu slide responsive-->
+<script type="text/javascript">
+    $(".burger").click(function(){
+        $(".menu").slideToggle();
+        $(".sousMenu").css("display", "none");
+    });
+
+    $(".menu li").click(function(){
+        $(".sousMenu").slideUp();
+        $(this).find('.menu').slideToggle();
+    });
+</script>

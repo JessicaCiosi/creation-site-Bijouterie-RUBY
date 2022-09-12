@@ -1,0 +1,593 @@
+html {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100%;
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    position: relative;
+    background-color: white;
+    height: auto;
+}
+
+/* Header */
+
+.main-header__container {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+    border-bottom: 2px solid #ff69B4;
+}
+
+.main-header__container-list {
+    position: absolute;
+    margin-left: 4em;
+}
+
+.pond {
+    margin: auto;
+}
+
+.header-rs {
+    padding: 0.6em;
+    color: #ff69B4;
+}
+
+.header-rs:hover {
+    color: black;
+}
+
+/* bouton retour haut de page */
+
+.scrollup {
+    width: 2.5em;
+	height: 2.4em;
+	position: fixed;
+	bottom: 3em;
+	right: 0.7em;
+	display: none;
+	color: white;
+	background-color: #3a3f51;
+	border: 1px solid #3a3f51;
+	font-size: 1.3em;
+	text-align: center;
+    line-height: 2.4em;
+    border-radius: 1.7em;
+}
+
+.scrollup:hover {
+    transition: 0.3s;
+    color: #ff69B4;
+}
+
+/* Menu principal */
+
+.desk ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu {
+    background-color: #ff69B4;
+    text-align: center;
+}
+
+.menu>li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu li a {
+    padding: 1.2em 2.2em;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #fa47a1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.sousMenu {
+    background-color: #cecece;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    max-height: 0;
+    z-index: 999;
+}
+
+.sousMenu a:hover{
+    background-color: #cecece;
+    color: black;
+}
+
+.menu li:hover .sousMenu {
+    position: absolute;
+    -webkit-transition: 1.2s;
+    transition: 1.2s;
+    max-height: 30em;
+}
+
+.sousMenu li a {
+    padding: 1em;
+}
+
+.sousMenu li {
+    border-bottom: 1px solid white;
+}
+
+.sousMenu li:last-of-type{
+    border: none;
+}
+
+.burger {
+    background-color: #3a3f51;
+    padding: 0.6em;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: none;
+}
+
+.burger:hover {
+    color: #ff69B4;
+}
+
+
+/* Footer */
+
+.footer-menu {
+    background-color: #ff69B4;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu li {
+    display: inline-block;
+}
+
+.footer-menu a {
+    margin: 1em;
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Accueil */
+
+.accueil-precision {
+    text-align: center;
+    margin: 3em;
+}
+
+.categorie-accueil {
+    border: 2px dotted #cecece;
+    border-radius: 4%;
+    margin: 2em;
+}
+
+.titre-categorie-accueil {
+    color: #ff69B4;
+    font-weight: bold;
+    text-align: center;
+}
+
+.categorie-accueil-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none outside none;
+    padding: 0;
+}
+
+.categorie-accueil-li {
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.categorie-accueil-li:hover {
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+.categorie-accueil-li h4 {
+    border-top: 2px solid #ff69B4;
+    border-bottom: 2px solid #ff69B4;
+    position: absolute;
+    width: 40%;
+    z-index: 5;
+    text-align: center;
+    margin-bottom: 0;
+    top: 35%;
+    left: 25%;
+    padding: 0.7em 0.7em;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.nbr-visites-total {
+    border: 2px solid black;
+    padding: 2em;
+    margin: 10em auto;
+    text-align: center;
+    width: 40%;
+}
+
+.nbr-visites-total p {
+    margin: 0.3em;
+}
+
+/* Accueil partie Slideshow */
+
+.slideshow-accueil {
+    width: 100%;
+    position: relative;
+}
+
+.slider, .pagination {
+    list-style: none;
+}
+
+.slider {
+    padding: 0;
+}
+
+.slider li, ul {
+    width: 100%;
+}
+
+.slider li img {
+    width: 100%;
+}
+
+.slider .caption1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px 140px;
+    z-index: 1;
+    color: black;
+}
+
+.slider .caption2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px 180px;
+    z-index: 1;
+    color: black;
+}
+
+.slider .caption1 h3, .slider .caption2 h3 {
+    display: none;
+}
+
+.slider .caption1 h1, .slider .caption2 h1 {
+    font-size: 40px;
+}
+
+.slider .caption1 p, .slider .caption2 p {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.pagination {
+    position: absolute;
+    top: 98%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    font-size: 10px;
+    margin: 2px 5px;
+    color: #cecece;
+    cursor: pointer;
+}
+
+.left, .right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+
+/* Bijoux */
+
+.section-menu-bijoux h3 {
+    text-align: center;
+    margin: 3em 0 2em 0;
+}
+
+.menu-bijoux {
+    list-style: none;
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.menu-bijoux li {
+    display: inline-block;
+}
+
+.menu-bijoux li:not(:first-of-type) a{
+    border-left: 1px solid white;
+}
+
+.menu-bijoux a {
+    background-color: #ff69B4;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 0.4em 1em;
+    border-radius: 2em;
+}
+
+.menu-bijoux a:hover {
+    background-color: #f12f90;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.titres-cat-bijoux {
+    border-bottom: 2px solid #ff69B4;
+    padding: 1em 0 0.4em 0.4em;
+}
+
+.img-page-bijoux {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.zoom img:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+#img-piercings img{
+    margin: 0 1em;
+}
+
+/* Autres accessoires */
+
+.menu-accessoires {
+    list-style: none;
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.menu-accessoires li {
+    display: inline-block;
+}
+
+.menu-accessoires li:not(:first-of-type) a{
+    border-left: 1px solid white;
+}
+
+.menu-accessoires a {
+    background-color: #ff69B4;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 0.4em 1em;
+    border-radius: 2em;
+}
+
+.menu-accessoires a:hover {
+    background-color: #f12f90;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.titres-cat-accessoires {
+    border-bottom: 2px solid #ff69B4;
+    padding: 1em 0 0.4em 0.4em;
+}
+
+.img-page-accessoires {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* bijoux et autres accessoires */
+
+.zoom img {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.zoom p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4.5em;
+}
+
+/* fin bijoux et autres accessoires */
+
+.zoom img:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.zoom a {
+    color: black;
+    text-decoration: none;
+}
+
+.zoom a:hover {
+    color: #ff69B4;
+}
+
+#img-bandeaux img{
+    margin: 0 1em;
+}
+
+/* A propos */
+
+.main-boutique {
+    text-align: center;
+}
+
+.titre-boutique, .titre-contact, .titre-accessoires, .titre-bijoux {
+    background-color: #cecece;
+    color: #ff69B4;
+    padding: 0.05em ;
+    text-align: center;
+}
+
+.nom-boutique {
+    font-size: 1.45em;
+}
+
+.details-boutique-block-1 {
+    margin: 2.5em 11em 2em 11em;
+}
+
+.details-boutique-adresse, .details-boutique-horaires {
+    margin-top: 2em;
+}
+
+.details-boutique-adresse a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff69B4;
+}
+
+.details-boutique-block-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1.7em;
+}
+
+.gmap {
+    width: 1700px;
+}
+
+.gmap iframe{
+    width: 80%;
+    height: 60vh;
+}
+
+
+.img-a-propos img {
+    width: 80%;
+    height: auto;
+}
+
+/* Contact*/
+
+.main-contact {
+    position: relative;
+    display: block;
+    margin-bottom: 3.3em;
+}
+
+.alert-danger {
+    border: 1px solid crimson;
+}
+
+.section-form-contact {
+    margin-top: 3em;
+}
+
+.form-contact {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-contact label {
+    display: block;
+}
+
+.input-form {
+    width: 100%;
+    padding: 0.5em 0.6em;
+}
+
+.form-contact textarea {
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0.5em 0.6em;
+}
+
+.boutonForm{
+    padding: 0.5em 1.2em;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.boutonForm:hover {
+    color: white;
+    background-color: #ff69B4;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+/* Mentions légales */
+
+.ml-titre {
+    text-align: center;
+}
+
+.tableDash {
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
